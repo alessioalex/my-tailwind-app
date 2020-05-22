@@ -19,7 +19,7 @@
 }
 
 .btn-gray {
-  @apply bg-gray-400 text-gray-800;
+  @apply bg-gray-300 text-gray-800;
 }
 .btn-gray:hover {
   @apply bg-gray-300;
