@@ -9,7 +9,7 @@
 <body>
   <div id="app" class="antialiased text-gray-900">
     <div class="bg-gray-200 min-h-screen p-8 flex items-center justify-center">
-      
+      <!-- card(s) go here -->
     </div>
   </div>
 
@@ -30,7 +30,9 @@
     document.querySelector('#app div').innerHTML = /*html*/`
 
       <div class="bg-white border rounded-lg overflow-hidden">
-        <img src="${cardData.imageUrl}" alt="${cardData.imageAlt}">
+        <!-- following div for IE 11 lolz -->
+        <!-- <div class="h-48 bg-cover bg-center" style="background-image: url('${cardData.imageUrl}')"></div>-->
+        <img class="h-48 w-full object-cover" src="${cardData.imageUrl}" alt="${cardData.imageAlt}">
         <div class="p-6">
           <div class="flex items-baseline">
             <span class="inline-block bg-teal-200 text-teal-800 text-xs px-2 rounded-full uppercase font-semibold tracking-wide">New</span>
