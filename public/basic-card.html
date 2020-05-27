@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/build/tailwind.css">
 </head>
 <body>
-  <div id="app">
+  <div id="app" class="antialiased text-gray-900">
     <div class="bg-gray-200 min-h-screen p-8 flex items-center justify-center">
       
     </div>
@@ -19,7 +19,8 @@
       imageAlt: 'Rear view of modern home with pool',
       beds: 3,
       baths: 2,
-      title: "Modern home in city center",
+      title: "Modern executive home in the heart of historic Los Angeles",
+      // title: "Modern home in city center",
       priceInCents: 190000,
       formattedPrice: "$1,900.00",
       reviewCount: 34,
@@ -27,21 +28,25 @@
     };
 
     document.querySelector('#app div').innerHTML = /*html*/`
+
       <div class="bg-white border rounded-lg overflow-hidden">
         <img src="${cardData.imageUrl}" alt="${cardData.imageAlt}">
         <div class="p-6">
-          <h4>${cardData.title}</h4>
-          <div>
+          <div class="text-gray-600 text-xs uppercase font-semibold tracking-wide">
             ${cardData.beds} beds &bull; ${cardData.baths} baths
           </div>
-          <div>
-            ${cardData.formattedPrice} / wk
+          <h4 class="font-semibold text-lg leading-tight truncate">${cardData.title}</h4>
+          <div class="mt-1">
+            ${cardData.formattedPrice}
+            <span class="text-gray-600 text-sm">/ wk</span>
           </div>
-          <div>
-            ${cardData.rating}/5 stars (based on ${cardData.reviewCount} reviews)
+          <div class="mt-4">
+            <span class="text-teal-600 font-semibold">${cardData.rating}/5 stars</span>
+            <span class="text-gray-600 text-sm">(based on ${cardData.reviewCount} reviews)</span>
           </div>
         </div>
       </div>
+
     `;
   </script>
 </body>
